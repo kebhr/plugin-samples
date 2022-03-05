@@ -81,6 +81,7 @@
                 libs = infos.jsLibs;
                 break;
             case 'css_pc':
+            case 'css_mb':
                 libs = infos.cssLibs;
                 break;
         }
@@ -194,6 +195,7 @@
                 editor.editor.getSession().setMode('ace/mode/javascript');
                 break;
             case 'css_pc':
+            case 'css_mb':
                 editor.editor.getSession().setMode('ace/mode/css');
                 break;
         }
@@ -215,6 +217,9 @@
                 break;
             case 'css_pc':
                 customizationPart = customization.desktop.css;
+                break;
+            case 'css_mb':
+                customizationPart = customization.mobile.css;
                 break;
         }
 
@@ -293,6 +298,7 @@
                 libs = infos.jsLibs;
                 break;
             case 'css_pc':
+            case 'css_mb':
                 libs = infos.cssLibs;
                 break;
         }
@@ -355,6 +361,7 @@
                 }
                 break;
             case 'css_pc':
+            case 'css_mb':
                 if (!fileName.match(/\.css$/)) {
                     fileName = fileName + '.css';
                 }
@@ -393,6 +400,10 @@
             invalidCustomization.push('js_mb');
         }
 
+        if (customizaions.mobile.css.length > MAX_CUSTOMIZATION) {
+            invalidCustomization.push('css_mb');
+        }
+
         return invalidCustomization;
     }
 
@@ -414,6 +425,9 @@
                 break;
             case 'css_pc':
                 app.customization.desktop.css.push(newFileInfo);
+                break;
+            case 'css_mb':
+                app.customization.mobile.css.push(newFileInfo);
                 break;
         }
 
@@ -439,6 +453,7 @@
                 fileTypeRegex = /.js$/;
                 break;
             case 'css_pc':
+            case 'css_mb':
                 fileTypeRegex = /.css$/;
                 break;
         }
@@ -514,6 +529,9 @@
                 break;
             case 'css_pc':
                 newCustomization.desktop.css = content;
+                break;
+            case 'css_mb':
+                newCustomization.mobile.css = content;
                 break;
         }
 

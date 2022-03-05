@@ -91,6 +91,10 @@
                 {
                     label: i18n.css_pc,
                     value: 'css_pc',
+                },
+                {
+                    label: i18n.css_mb,
+                    value: 'css_mb',
                 }
             ],
             value: 'js_pc'

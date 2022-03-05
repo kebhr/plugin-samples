@@ -38,6 +38,7 @@
                 js_pc: 'JavaScript Files for PC',
                 js_mb: 'JavaScript Files for Mobile',
                 css_pc: 'CSS Files for PC',
+                css_mb: 'CSS Files for Mobile',
                 new_file: 'New File',
                 discard: 'Discard',
                 back: 'Back to Plug-ins',
@@ -62,6 +63,7 @@
                 js_pc: 'PC用のJavaScriptファイル',
                 js_mb: 'スマートフォン用のJavaScriptファイル',
                 css_pc: 'PC用のCSSファイル',
+                css_mb: 'スマートフォン用のCSSファイル',
                 new_file: '新規作成',
                 discard: '破棄',
                 back: 'プラグインへ戻る',
@@ -86,6 +88,7 @@
                 js_pc: 'JavaScript Files for PC',
                 js_mb: 'JavaScript Files for Mobile',
                 css_pc: 'CSS Files for PC',
+                css_mb: 'CSS Files for Mobile',
                 new_file: 'New File',
                 discard: '   Discard   ',
                 back: 'Back to Plug-ins',
@@ -249,5 +252,5 @@
         jsEditKintonePlugin.i18n = localization[jsEditKintonePlugin.lang] ? localization[jsEditKintonePlugin.lang] : localization['en'];
     }
     initI18n();
-    
+
 })(kintone.$PLUGIN_ID);
